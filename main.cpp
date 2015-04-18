@@ -174,7 +174,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//set kernel arguements
 	clSetKernelArg(graying, 0, sizeof(cl_mem), &cl_img_in);
 	clSetKernelArg(graying, 1, sizeof(cl_mem), &cl_img_out);
-//	clSetKernelArg(graying, 2, sizeof(unsigned int), &in_img_rows);
+	clSetKernelArg(graying, 2, sizeof(unsigned int), &DATA_SIZE);
 //	clSetKernelArg(graying, 3, sizeof(unsigned int), &in_img_cols);
 //	clSetKernelArg(graying, 4, sizeof(unsigned int), &in_img_channels);
 

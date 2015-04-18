@@ -1,13 +1,9 @@
 
-#define ROWS 576
-#define COLS 720
-#define CHANNELS 3
-
-__kernel void graying(__global const uchar* restrict img_test_in, __global uchar* restrict img_test_out)
+__kernel void graying(__global const uchar* restrict img_test_in, __global uchar* restrict img_test_out, const unsigned int iterations)
 {
-    int count = 0; 
+    unsigned int count = 0; 
     uchar rows[3];
-    while(count != ROWS * COLS * CHANNELS)
+    while(count != iterations)
     {
 		#pragma unroll
 		for (int i = 0; i < 3; i++)
